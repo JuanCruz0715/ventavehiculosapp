@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { DetallevehiculosComponent } from '../detallevehiculos/detallevehiculos.component';
 
 @Component({
   selector: 'app-listavehiculos',
@@ -6,9 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./listavehiculos.component.css']
 })
 export class ListavehiculosComponent {
- 
+
     vehiculos = [
-      { id: 1, tipo: 'auto', marca: 'Toyota', modelo: 'Corolla', imagen: 'assets/images/tc.jpg' },
+      { id: 1, tipo: 'auto', marca: 'Toyota', modelo: 'Corolla', imagen: 'assets/images/tc.jpg',},
       { id: 2, tipo: 'moto', marca: 'Honda', modelo: 'Wave',imagen: 'assets/images/hw.jpg' },
       { id: 3, tipo: 'camioneta', marca: 'Ford', modelo: 'F100', imagen: 'assets/images/f100.jpg'}, 
       { id: 4, tipo: 'auto', marca: 'Ford', modelo: 'Focus', imagen: 'assets/images/ff.jpg'},
@@ -19,16 +21,19 @@ export class ListavehiculosComponent {
       { id: 9, tipo: 'camioneta', marca: 'Ford', modelo: 'Maverick', imagen: 'assets/images/fm.jpg'},
       { id: 10, tipo: 'cuatriciclo', marca: 'Honda', modelo: 'TRX',imagen: 'assets/images/ht.jpg'},
     ];
+    constructor(private router: Router) {}
+    
+  verDetalles(id: number) {
+    this.router.navigate(['/detalle', id]);
+  }
 
-    categoriaElegida: string = '';
-
-   
+   categoriaElegida: string = '';
      filtrarPorCategoriaVehiculos(categoria:string) {
       this.categoriaElegida = categoria;
     }
 
-     mostrarVehiculos() {
+   mostrarVehiculos() {
       this.categoriaElegida = '';
     }
-    
-}
+  }
+

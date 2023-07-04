@@ -1,1 +1,12 @@
-<p>detallevehiculos works!</p>
+<div class="container">
+    <h2>Detalle de Vehiculo</h2>
+    <div *ngIf="vehiculo">
+      <h3>{{ vehiculo.marca }} {{ vehiculo.modelo }}</h3>
+      <p>Tipo: {{ vehiculo.tipo }}</p>
+      <p>Año: {{ vehiculo.anho }}</p>
+      <p>Kilómetros: {{ vehiculo.kilometros }}</p>
+      <p>Precio: {{ vehiculo.precio }}</p>
+      <img *ngIf="vehiculo.imagen" [src]="vehiculo.imagen" alt="Imagen del vehículo" style="max-width: 200px;">
+    </div>
+  </div>
+  
