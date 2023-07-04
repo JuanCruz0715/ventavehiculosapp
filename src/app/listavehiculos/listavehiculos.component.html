@@ -1,0 +1,27 @@
+<div class="container">
+  <nav class="left-nav">
+    <ul>
+      <li><a href="" (click)="mostrarVehiculos()">VEHICULOS</a></li>
+      <li><a href="" (click)="filtrarPorCategoriaVehiculos('auto')">Autos</a></li>
+      <li><a href="" (click)="filtrarPorCategoriaVehiculos('moto')">Motos</a></li>
+      <li><a href="" (click)="filtrarPorCategoriaVehiculos('camioneta')">Camionetas</a></li>
+      <li><a href="" (click)="filtrarPorCategoriaVehiculos('cuatriciclo')">Cuatriciclos</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+<div class="vehiculos-container">
+  <h2>VEHICULOS</h2>
+
+  <div *ngFor="let vehiculo of vehiculos">
+    <div *ngIf="!categoriaElegida || vehiculo.tipo == categoriaElegida" >
+      <h3>{{ vehiculo.marca }} {{ vehiculo.modelo }}</h3>
+      <p>Categoría: {{ vehiculo.tipo }}</p>
+      <img *ngIf="vehiculo.imagen" [src]="vehiculo.imagen" alt="Imagen del vehículo" style="max-width: 200px;">
+      <button (click)="(vehiculo.id)">Ver detalles</button>
+    </div>
+    <hr>
+  </div>
+</div>
+

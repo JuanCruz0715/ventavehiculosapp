@@ -1,0 +1,44 @@
+nav {
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+    margin-right: 10px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  button {
+    margin-top: 10px;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  nav ul {
+    margin-right: auto; /* Mueve el primer nav a la izquierda */
+  }
+  
+  ul.categories {
+    margin-left: auto; /* Mueve el segundo nav a la derecha */
+  }
+  .vehiculos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
