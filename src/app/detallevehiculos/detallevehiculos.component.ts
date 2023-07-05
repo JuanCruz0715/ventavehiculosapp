@@ -27,7 +27,7 @@ export class DetallevehiculosComponent implements OnInit {
         
     ];
 
-    this.route.paramMap.subscribe(params => { // obtenemos el id
+    this.route.paramMap.subscribe(params => { // recibimos el id
       const id = Number(params.get('id')); // envia el id por url con e params . get obtengo la id de a url
 
       this.vehiculo = vehiculos.find(v => v.id === id); // Busca el vehículo por ID

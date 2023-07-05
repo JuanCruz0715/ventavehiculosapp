@@ -25,3 +25,17 @@
     <hr>
   </div>
 </div>
+<h3>Agregar vehiculo</h3>
+<label>Tipo de Vehiculo:</label>
+<br>
+<input type="text" [(ngModel)]="newVehiculoTipo">
+<br>
+<label>Marca:</label>
+<br>
+<input type="text" [(ngModel)]="newVehiculoMarca">
+<br>
+<label>Modelo:</label>
+<br>
+<input type="text" [(ngModel)]="newVehiculoModelo">
+<br>
+<button (click)="addVehiculo()">Agregar</button>

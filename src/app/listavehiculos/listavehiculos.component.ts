@@ -23,7 +23,18 @@ export class ListavehiculosComponent {
     ];
 
     constructor(private router: Router) {}
+    newVehiculoTipo: string = '';
+    newVehiculoMarca: string = ''; 
+    newVehiculoModelo: string = '';
     
+    addVehiculo() {
+      const newVehiculo = {id: this.vehiculos.length + 1, tipo: this.newVehiculoTipo, marca: this.newVehiculoMarca, modelo : this.newVehiculoModelo, imagen: "" };
+      this.vehiculos.push(newVehiculo);
+      this.newVehiculoMarca = '';
+      this.newVehiculoModelo = '';
+      this.filtrarPorCategoriaVehiculos(this.categoriaElegida); // Se vuelve a aplicar el filtro después de agregar un producto para que se vea reflejado el cambio
+    }
+
   verDetalles(id: number) {
     this.router.navigate(['/detalle', id]);
   }
