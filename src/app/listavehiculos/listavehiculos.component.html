@@ -19,6 +19,7 @@
       <p>Categoría: {{ vehiculo.tipo }}</p>
       <img *ngIf="vehiculo.imagen" [src]="vehiculo.imagen" alt="Imagen del vehículo" style="max-width: 200px;">
       <button (click)="verDetalles(vehiculo.id)">Ver detalles</button>
+      <button (click)="eliminarVehiculo(vehiculo.id)">Eliminar</button>
     </div>
     <hr>
   </div>

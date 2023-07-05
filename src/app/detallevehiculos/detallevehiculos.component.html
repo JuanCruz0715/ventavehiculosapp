@@ -8,5 +8,6 @@
       <p>Precio: {{ vehiculo.precio }}</p>
       <img *ngIf="vehiculo.imagen" [src]="vehiculo.imagen" alt="Imagen del vehículo" style="max-width: 200px;">
     </div>
+    <button (click)="volver()">Volver a la lista de vehículos</button>
   </div>
   

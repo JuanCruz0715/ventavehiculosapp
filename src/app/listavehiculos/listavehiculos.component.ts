@@ -35,5 +35,9 @@ export class ListavehiculosComponent {
    mostrarVehiculos() {
       this.categoriaElegida = '';
     }
+    //funcion para eliminar el vehiculo del arreglo
+    eliminarVehiculo(id: number) {
+      this.vehiculos = this.vehiculos.filter(vehiculo => vehiculo.id !== id);
+    }
+    
   }
-
