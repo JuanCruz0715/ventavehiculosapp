@@ -9,10 +9,11 @@
       <li><a (click)="filtrarPorCategoriaVehiculos('cuatriciclo')">Cuatriciclos</a></li>  
     </ul>
   </nav>
+  
 </div>
 <div class="vehiculos-container">
   <h2>VEHICULOS EN VENTA</h2>
-
+  <button (click)="agregarNuevoVehiculo()">Agregar Vehículo</button>
   <div *ngFor="let vehiculo of vehiculos">
     <div *ngIf="!categoriaElegida || vehiculo.tipo === categoriaElegida">
       <h3>{{ vehiculo.marca }} {{ vehiculo.modelo }}</h3>

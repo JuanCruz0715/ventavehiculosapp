@@ -41,4 +41,25 @@ nav {
     align-items: center;
     justify-content: center;
   }
+  .container {
+    display: flex;
+  }
+
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .formulario {
+    flex-basis: 300px;
+    margin-right: 20px;
+  }
+  
+  .vehiculos-container {
+    flex-grow: 1;
+    /* Estilos para la lista de vehículos */
+  }
+  
   

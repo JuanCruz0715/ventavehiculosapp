@@ -21,6 +21,7 @@ export class ListavehiculosComponent {
       { id: 9, tipo: 'camioneta', marca: 'Ford', modelo: 'Maverick', imagen: 'assets/images/fm.jpg'},
       { id: 10, tipo: 'cuatriciclo', marca: 'Honda', modelo: 'TRX',imagen: 'assets/images/ht.jpg'},
     ];
+
     constructor(private router: Router) {}
     
   verDetalles(id: number) {
@@ -35,9 +36,27 @@ export class ListavehiculosComponent {
    mostrarVehiculos() {
       this.categoriaElegida = '';
     }
-    //funcion para eliminar el vehiculo del arreglo
+
     eliminarVehiculo(id: number) {
       this.vehiculos = this.vehiculos.filter(vehiculo => vehiculo.id !== id);
     }
+
+    agregarVehiculo(nuevoVehiculo: any) {
+      this.vehiculos.push(nuevoVehiculo);
+    }
+
+    agregarNuevoVehiculo() {
+      const nuevoVehiculo = {
+        id: 11,
+        tipo: 'auto',
+        marca: 'volkswagen',
+        modelo: 'gol',
+        imagen: 'assets/images/gl.jpg'
+      };
     
-  }
+      this.agregarVehiculo(nuevoVehiculo);
+    }
+    
+}
+    
+  
